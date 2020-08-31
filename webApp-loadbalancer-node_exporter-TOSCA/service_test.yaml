@@ -219,7 +219,7 @@ topology_template:
         flavor: m2.xsmall
         network: provider_64_net
         key_name: key_paul
-    vm1:
+    vm_xx:
       type: my.nodes.VM.OpenStack
       properties:
         name: nginxRadon_Host_1
@@ -227,45 +227,22 @@ topology_template:
         flavor: m2.xsmall
         network: provider_64_net
         key_name: key_paul
-    node1:
+    node_xx:
       type: my.nodes.NodeExporter
       requirements:
-      - host: vm1
-    nginx:
+      - host: vm1_xx
+    nginx_xx:
       type: my.nodes.Nginx
       requirements:
-      - host: vm1
+      - host: vm1_xx
       - connectToLB: nginx-lb
-    site:
+    site_xx:
       type: my.nodes.Nginx.Site
       properties:
         hostname: site1
       requirements:
-      - host: nginx
+      - host: nginx_xx
     nginx-lb:
       type: my.nodes.Nginx.loadBalancer
       requirements:
       - host: vm_loadBalancer
-    vm_7:
-      type: my.nodes.VM.OpenStack
-      properties:
-        name: nginxRadon_Host_7
-        image: centos7
-        flavor: m2.xsmall
-        network: provider_64_net
-        key_name: key_paul
-    node_7:
-      type: my.nodes.NodeExporter
-      requirements:
-      - host: vm_7
-    nginx_7:
-      type: my.nodes.Nginx
-      requirements:
-      - host: vm_7
-      - connectToLB: nginx-lb
-    site_7:
-      type: my.nodes.Nginx.Site
-      properties:
-        hostname: site_7
-      requirements:
-      - host: nginx_7
