@@ -1,0 +1,54 @@
+{
+  "tosca_name": {
+    "is_set": true,
+    "data": "vm1"
+  },
+  "tosca_id": {
+    "is_set": true,
+    "data": "vm1_0"
+  },
+  "state": {
+    "is_set": true,
+    "data": "started"
+  },
+  "name": {
+    "is_set": true,
+    "data": "nginxRadon_Host_1"
+  },
+  "image": {
+    "is_set": true,
+    "data": "centos7"
+  },
+  "flavor": {
+    "is_set": true,
+    "data": "m2.xsmall"
+  },
+  "network": {
+    "is_set": true,
+    "data": "provider_64_net"
+  },
+  "key_name": {
+    "is_set": true,
+    "data": "key_paul"
+  },
+  "private_address": {
+    "is_set": true,
+    "data": ""
+  },
+  "public_address": {
+    "is_set": true,
+    "data": "172.17.65.152"
+  },
+  "networks": {
+    "is_set": false,
+    "data": null
+  },
+  "ports": {
+    "is_set": false,
+    "data": null
+  },
+  "id": {
+    "is_set": true,
+    "data": "5244f486-5014-45a2-9286-f6377f80a04b"
+  }
+}
